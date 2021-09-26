@@ -7,13 +7,15 @@ const ReviewDetails = () => {
 
     const {loading, data, error } = useFetch(`http://localhost:1337/reviews/${id}`)
     
-    if(loading) return <div class="lds-facebook"><div></div><div></div><div></div></div>
+    if(loading) return <div className="lds-facebook"><div></div><div></div><div></div></div>
     if(error) return <p>Something went wrong :(</p>
 
     console.log(data);
 
     return (
-        <div className='review-card'>
+        <div className='review-card'> 
+            {/* <img src={data.cover.url} alt=""/> */}
+              
               <div className="rating" >{data.rating}</div>
               <h2>{data.title}</h2>
 

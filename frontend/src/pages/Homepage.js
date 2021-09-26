@@ -6,7 +6,7 @@ const Homepage = () => {
     //destructuring
     const { loading, data, error } = useFetch('http://localhost:1337/reviews')
 
-    if(loading) return <div class="lds-facebook"><div></div><div></div><div></div></div>
+    if(loading) return <div className="lds-facebook"><div></div><div></div><div></div></div>
     if(error) return <p>Something went wrong :(</p>
 
     return (
