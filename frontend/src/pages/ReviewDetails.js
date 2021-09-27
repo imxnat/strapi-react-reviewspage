@@ -21,7 +21,7 @@ const ReviewDetails = () => {
               <div className="rating" >{data.rating}</div>
               <h2>{data.title}</h2>
 
-              <small>console list</small>
+              <small>Created: {review.created_at.substring(0,10)}  |  Last Update: {review.updated_at.substring(0,10)}</small>
 
               <p>{data.body}</p>
               <Link to='/' >Back to reviews</Link>
